@@ -3,15 +3,13 @@ package com.applause.model.entities;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.List;
 
 @Getter
 @NoArgsConstructor
-@Entity(name = "devices")
+@Entity
+@Table(name = "devices")
 public class Device {
 
     @Id

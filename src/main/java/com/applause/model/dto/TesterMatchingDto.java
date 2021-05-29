@@ -5,6 +5,6 @@ import lombok.Data;
 @Data
 public class TesterMatchingDto {
 
-    public final String tester;
-    public final int bugs;
+    public final String testerName;
+    public final int bugsFound;
 }

@@ -9,7 +9,8 @@ import java.util.List;
 
 @Getter
 @NoArgsConstructor
-@Entity(name = "testers")
+@Entity
+@Table(name = "testers")
 public class Tester {
 
     @Id
