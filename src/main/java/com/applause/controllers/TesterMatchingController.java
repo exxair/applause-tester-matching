@@ -17,9 +17,9 @@ public class TesterMatchingController {
 
     @GetMapping("/testers")
     public String findTesters(@RequestParam(required = false) List<String> countries, @RequestParam(required = false) List<String> devices, Model model) {
-       model.addAttribute("availableDevices", testerMatchingService.getAvailableDevices());
-       model.addAttribute("availableCountries", testerMatchingService.getAvailableCountries());
-       model.addAttribute("testers", testerMatchingService.findByCountriesAndDevices(countries, devices));
+        model.addAttribute("availableDevices", testerMatchingService.getAvailableDevices());
+        model.addAttribute("availableCountries", testerMatchingService.getAvailableCountries());
+        model.addAttribute("testers", testerMatchingService.findByCountriesAndDevices(countries, devices));
         return "testers";
     }
 
