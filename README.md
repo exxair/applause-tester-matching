@@ -3,15 +3,15 @@
 ## Setup
 To run this project, build it locally with maven
 ```
-maven install
+mvn install
 ```
 
-and run it with 
+and start it with maven
 ```
 mvn spring-boot:run
 ```
  
-or 
+or run jar file under /target
 ```
 java -jar applause-tester-matching-1.0.jar
 ```
