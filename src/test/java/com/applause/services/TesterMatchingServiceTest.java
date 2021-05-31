@@ -18,7 +18,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-
 @ExtendWith(MockitoExtension.class)
 class TesterMatchingServiceTest {
 
@@ -90,14 +89,13 @@ class TesterMatchingServiceTest {
     }
 
     private List<TesterMatchingProjection> getFindPerCountriesAndDevicesResult() {
-        return List.of(TesterMatchingProjectionImpl.builder().testerId(1L).firstName(FIRST_TESTER_NAME).lastName(FIRST_TESTER_SURNAME).bugsNumber(FIRST_TESTER_BUGS).build(),
-                TesterMatchingProjectionImpl.builder().testerId(1L).firstName(SECOND_TESTER_NAME).lastName(SECOND_TESTER_SURNAME).bugsNumber(SECOND_TESTER_BUGS).build());
+        return List.of(TesterMatchingProjectionImpl.builder().firstName(FIRST_TESTER_NAME).lastName(FIRST_TESTER_SURNAME).bugsNumber(FIRST_TESTER_BUGS).build(),
+                TesterMatchingProjectionImpl.builder().firstName(SECOND_TESTER_NAME).lastName(SECOND_TESTER_SURNAME).bugsNumber(SECOND_TESTER_BUGS).build());
     }
 
     @Builder
     @Getter
     private static class TesterMatchingProjectionImpl implements TesterMatchingProjection {
-        private final Long testerId;
         private final String firstName;
         private final String lastName;
         private final Integer bugsNumber;

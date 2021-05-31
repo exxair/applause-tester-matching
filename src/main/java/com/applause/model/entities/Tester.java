@@ -7,6 +7,9 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
+/**
+ * Represents a tester
+ */
 @Getter
 @NoArgsConstructor
 @Entity
@@ -28,10 +31,8 @@ public class Tester {
     private List<Bug> bugs;
 
     @ManyToMany
-    @JoinTable(
-            name = "tester_device",
+    @JoinTable(name = "tester_device",
             joinColumns = {@JoinColumn(name = "testerId")},
-            inverseJoinColumns = {@JoinColumn(name = "deviceId")}
-    )
+            inverseJoinColumns = {@JoinColumn(name = "deviceId")})
     private List<Device> devices;
 }

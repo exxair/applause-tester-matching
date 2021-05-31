@@ -6,6 +6,9 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.util.List;
 
+/**
+ * Represents a device type for testing
+ */
 @Getter
 @NoArgsConstructor
 @Entity

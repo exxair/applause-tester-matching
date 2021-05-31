@@ -5,6 +5,9 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
+/**
+ * Represents a bug found on a specific device by some tester
+ */
 @Getter
 @NoArgsConstructor
 @Entity
@@ -15,10 +18,10 @@ public class Bug {
     private long bugId;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="deviceId", nullable=false)
+    @JoinColumn(name = "deviceId", nullable = false)
     private Device device;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="testerId", nullable=false)
+    @JoinColumn(name = "testerId", nullable = false)
     private Tester tester;
 }

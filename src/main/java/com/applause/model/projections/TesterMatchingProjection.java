@@ -1,8 +1,9 @@
 package com.applause.model.projections;
 
+/**
+ * Projection representing tester and number of bugs found within specific devices
+ */
 public interface TesterMatchingProjection {
-
-    Long getTesterId();
 
     String getFirstName();
 
