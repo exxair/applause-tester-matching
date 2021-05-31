@@ -1,0 +1,38 @@
+body {
+    background-color: #89d4cf;
+    background-image: linear-gradient(315deg, #89d4cf 0%, #6e45e1 74%);
+}
+
+.main-container {
+    background-color: #dedede;
+    border-radius: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    left: 50%;
+    margin: 5vh 0;
+    max-width: 600px;
+    padding: 15px 80px;
+    position: relative;
+    transform: translate(-50%, 0);
+}
+
+.main-container > * {
+    align-self: center;
+}
+
+.filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 15px 0;
+}
+
+.filter .filter__checkbox {
+    flex: 1 1 0;
+    padding-right: 10px;
+    white-space: nowrap;
+}
+
+.tester {
+    display: flex;
+}

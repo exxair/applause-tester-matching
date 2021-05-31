@@ -18,5 +18,8 @@ public interface TesterRepository extends JpaRepository<Tester, Long> {
             "and ((:devices) = null or d.description in :devices) " +
             "group by t.testerId " +
             "order by bugsNumber DESC")
-    List<TesterMatchingProjection> findByCountriesAndDevices(List<String> countries, List<String> devices);
+    List<TesterMatchingProjection> findPerCountriesAndDevices(List<String> countries, List<String> devices);
+
+    @Query("select distinct t.country from Tester t")
+    List<String> getAvailableCountries();
 }
